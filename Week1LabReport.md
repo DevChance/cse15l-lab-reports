@@ -89,7 +89,8 @@ ________________________________________________________________________________
 > 
 > **Some commands to try**
 > ________________________
-> 1. Try using "pwd" command in the terminal.
+>
+>  **Try using "pwd" command in the terminal.**
 >    * pwd stands for "Print Working Directory". Which essentially prints the current directory that your are in.
 >    Here is an example:
 >    
@@ -97,7 +98,8 @@ ________________________________________________________________________________
 >    
 >    After typing in "pwd" we are given the current working directory, which in the example is **"/home/linux/ieng6/cs15lwi23/cs15lwi23asg"**.
 
-> 2. Try using "cat /home/linux/ieng6/cs15lwi23/public/hello.txt" command in the terminal.
+
+>  **Try using "cat /home/linux/ieng6/cs15lwi23/public/hello.txt" command in the terminal.**
 >    * Cat stands for "concatenate". This command prints the contents of the path that is given.
 >    In this example we are using the "/home/linux/ieng6/cs15lwi23/public/hello.txt" directory to access the contents of "hello.txt" file.
 >    Here is an example:
@@ -106,8 +108,9 @@ ________________________________________________________________________________
 >    
 >    As you can see, after typing in "cat <path>" the contents of the "<path>" are printed out and in this example we see the message.
 >    "Hello! Welcome to CSE 15L"
-  
-> 3. Try using "cd .." command in the terminal.
+
+ 
+>  **Try using "cd .." command in the terminal.**
 >    * cd stands for "current directory". And ".." retrieves the parent directory.
 >    So together using "cd .." we are given the parent directory of the current directory.
 >    Here is an example:
@@ -117,7 +120,8 @@ ________________________________________________________________________________
 >    As you can see the current directory was changed to the parent directory after using the command "cd .."
 >
 
-> 4. Great Job! Check out these additional commands you can try...
+ 
+> **Great Job! Check out these additional commands you can try.**
 >    - cd
 >    - ls -lat
 >    - cd ~
