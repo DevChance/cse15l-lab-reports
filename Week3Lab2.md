@@ -1,5 +1,7 @@
 # ✨ Welcome to my Lab Report #2 ✨ 
+
 Written by: Chance Spurlin
+
 ------------------------------------
 
 ## Throughout this page we will review a program that I have written called "StringServer" 
