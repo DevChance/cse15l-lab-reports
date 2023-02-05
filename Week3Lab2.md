@@ -21,7 +21,7 @@
 
 ![Okay the end](https://user-images.githubusercontent.com/122570751/215906535-37ecd164-3a5f-46c3-ae3a-2a83031f3b02.png)
 
-  ## Methods Called:
+ ## Methods Called:
 * First, the handleRequest method is called, this method handles the url.
 * Then the url is analyzed to see if the path contains "/add-message" if it does, then ".split" method is called with "=" as the delimeter, this seperates everything between the equals sign.
 * Then finally, the ".add" and ".join" methods are used to add messages to the ArrayList "allMsg". Which is finally returned using "String.join".
