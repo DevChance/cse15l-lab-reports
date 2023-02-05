@@ -184,7 +184,7 @@ public void testMergeTwoLists() {
 As you can see above, in order to fix the code we have to check for a null in the specified index. If there is a null the index is increased by one to move onto the next index position. This allows the list to continue copying the contents of the list into the new list even if a null is found in either list.
 
                                 
-**Running JUnit again after bug fix**
+**Running JUnit again after bug fix:**
 
 Nice! Now its passing ALL JUnit Tests!                             
                                 
