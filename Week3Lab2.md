@@ -182,12 +182,12 @@ public void testMergeTwoLists() {
   }
 ```
 
-As you can see above, in order to fix the code we have to check for a null in the specified index. If there is a null the index is increased by one to move onto the next index position. This allows the list to continue copying the contents of the list into the new list even if a null is found in either list.
+As you can see above, in order to fix the code we have to check for a null in the specified index. If there is a null, the index is increased by one to move onto the next index position. This allows the list to continue copying the contents of the list onto the new list even if a null is found in either list.
 
                                 
 **Running JUnit again after bug fix:**
 
-Nice! Now its passing ALL JUnit Tests!                             
+Nice! Now its passing **ALL** JUnit Tests!                             
                                 
 ![image](https://user-images.githubusercontent.com/122570751/216842297-21e53ad2-1212-485c-a856-dce0f9689aa6.png)
 
@@ -202,7 +202,7 @@ Nice! Now its passing ALL JUnit Tests!
 ## Part 3: What I learned from the Labs
 
  - In the lab for week 2 I learned alot of new information pertaining to remote servers and how to write the code to create and run a server on ieng6 using java. Which I found to be very interesting and useful to learn.
- - In week 3 I learned about JUnit and how to write tests that can be used to check for bugs in your code. I really enjoyed learning about JUnit because it seems very applicable when trying to learn how to debug code. Learning how to write tests and understand JUnit more indepth is increbly helpful and useful tool for software programmers. I hope to learn more about JUnit and how to implement it when coding.                                
+ - In week 3 I learned about JUnit and how to write tests that can be used to check for bugs in your code. I really enjoyed learning about JUnit because it seems very applicable when trying to learn how to debug code. Learning how to write tests and understand JUnit more indepth is incredibly helpful and useful tool for software programmers. I hope to learn more about JUnit and how to implement it when coding.                                
                                 
                                 
 ________________________________________________________________________________________________________________________________________________________
