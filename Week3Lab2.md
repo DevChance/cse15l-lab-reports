@@ -29,7 +29,7 @@
 * In the handleRequest method it takes the parameter "URI url" and when given a relevant argument such as a url with "/add-message" the int num is incremented by one to keep track of the number of messages.
 * If the url has the argument "/add-message" the ".split" method uses "=" as an argument to split the string into a string array called "finalString". 
 * Then using the ".join" method and also utilizing "\n" as the delimeter/argument so that a new line is produced each time a message is returned. The messages are then taken from "finalString" and copied into ArrayList "allMsg". The ArrayList "allMsg" contains all of the arguments that are passed through the URI url handle if "/add-message" is present.
-## What Values of the relevant fields of the class change from these request:
+## What Values of the Relevant Fields Change from These Specified Request:
 * The values that change from the above requests are: **int num** (Keeps track of the number of "/add-message" requests), **String[] finalString** (Contains the final collection of strings), **String[] initialString** (Contains the first set of strings retrieved from the url provided, including "s"), **ArrayList allMsg** (Contains all messages previously added and returns them), and **URI url** (Contains the url address).
 
 
