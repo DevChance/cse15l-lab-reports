@@ -89,6 +89,7 @@ Two lists are created with the following contents:
    > ## List 1: "H", "He", "Hel", "Hell", "Hello"
  
    > ## List 2: "G", "Go", "Goo", "Good", "Good Bye". 
+ 
 In the JUnit test we check to see whether the merge method is working properly and returned a merged list that correctly combined List 1 and List 2 together in alphabetical order.
 ``` 
 @Test 
