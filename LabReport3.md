@@ -12,7 +12,7 @@ Written by: Chance Spurlin
 
 
 
-- **"grep"** is a command used to search through files containing text for a specific "pattern". It will then print out the lines that contain the specified "pattern" that was found in the text that was located in the folders.
+- **"grep"** is a command used to search through files containing text for a specific "pattern". It will then print out the lines that contain the specified "pattern" that was found in the text that was located in the designated directory.
 
 
 
@@ -71,7 +71,7 @@ written_2/travel_guides/berlitz2/Portugal-History.txt:0
 * What exactly does "grep -r -c "Coconut"" do? 
 * As we mentioned earlier, "grep" is a command used to search through files containing text for a specific "pattern", in this instance the pattern was "Coconut". 
 * We are also utilizing the "-r" option which allows grep to search recursively through the directories and subdirectories of the current directory.
-* Finally, we use the "-c" command option that counts the number times the specified pattern is found in the files contained in the directories.
+* Finally, we use the "-c" command option that counts the number times the specified pattern is found in the files contained in the directories and displays the number of occurences.
 
 
 # Here is another example using "grep -c"
@@ -111,7 +111,7 @@ grep -r -w -o "surfing" *txt | sort | uniq -c | sort -nr
 * As we mentioned earlier, "grep" is a command used to search through files containing text for a specific "pattern", in this instance the pattern was **"surfing"**. 
 * We are also utilizing the "-r" option which allows grep to search recursively through the directories and subdirectories of the current directory.
 * We then apply the "-w" command to search for the exact string "surfing" and not any strings that contain "surfing" such as "windsurfing".
-* We then utilize the "-o" command option that outputs the specified matching string found withing the file, in this case it is **"surfing"**.
+* We then utilize the "-o" command option that outputs the specified matching string found within the file, in this case it is **"surfing"**.
 * We then apply "*.txt | sort" command specifications. First "*.txt" declares that grep will only search through files containing ".txt" extenstions, Second "| sort" sorts the results obtained from the previous command.
 * Lastly, we apply the "| uniq -c | sort -nr" commands. The "| uniq -c" removes any duplicate lines and "-c" specifcally displays how many times "surfing" appears in each file. Finally, "| sort -nr" is applied. The command sorts the output in numerical descending order, with the file containing the most occurences "surfing" at the top.
 
@@ -196,6 +196,104 @@ written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
 
 # Here is another example using "grep -e"
 
+## Example 2: "grep -n -e "Aztec" Vallarta-History.txt"
+
+```
+
+pwd
+
+/c/Users/Chance/Desktop/CSE15L/LabReport3/skill-demo1-data-main/skill-demo1-data-main/written_2/travel_guides
+
+cd berlitz2
+
+pwd
+
+/c/Users/Chance/Desktop/CSE15L/LabReport3/skill-demo1-data-main/skill-demo1-data-main/written_2/travel_guides/berlitz2
+
+grep -n -e "Aztec" Vallarta-History.txt 
+
+7:The region’s history has some marked differences from the history of Mexico as a country. Although artifacts show that both the Aztec and Olmec pre-Hispanic cultures had a presence in the area, ancient civilizations created no notable settlements here. This fact, coupled with the geography of the region, spared it much of the bloodshed and turmoil of the Spanish conquest. With the imposing Sierra Madre Occidental mountain range running the length of the Pacific coastline, isolating it from the rest of mainland Mexico, the Pacific coast was able to develop at a slower, more tranquil pace.
+10:Puerto Vallarta was launched into the international spotlight when Hollywood director John Huston decided to film the Tennessee Williams’ play, Night of the Iguana, on nearby Mismaloya Beach. Its history, however, runs much deeper than that event. Recent archeological findings show six different cultures lived in the area, with settlements dating back to 300 b.c. The most important was part of the kingdom of Xalisco, centered in the modern state of Nayarit. A marked Aztec influence is also present, probably due to the centuries-long migration of Aztecs from the legendary city of Aztlán, on the Pacific coast, to Tenochtitlan, present-day Mexico City. Remains of these cultures can be seen in the Museo del Río Cuale.    
+27:In the early 1500s, Aztecs conquered the province of Coyuca, located between present-day Zihuatanejo and the Coyuca lagoon, and established a coastal capital, which they called Zihuatlan, “Place of Women,” named for the local matriarchal society. Residents today claim that the place was named for the beauty of the women, and means, “place of beautiful women.” 
+...
+      
+```
+
+## What "grep -n -e "Aztec" Vallarta-History.txt" is doing & why is it useful?"
+
+## Lets break down the command:
+
+* What exactly does "grep -n -e "Aztec" Vallarta-History.txt" do? 
+* As we mentioned earlier, "grep" is a command used to search through files containing text for a specific "pattern", in this instance the pattern was **"Aztec"**. 
+* We are also utilizing the "-n" option which causes grep to display the specific line number that the "Aztec" was found in.
+* Lastly, we apply the "-e" command to search for all the occurrences of the string "Aztec" "in Vallarta-History.txt".
+* We then specify the directory destiniation, which in this case is "Vallarta-History.txt" because we are looking into this destination specifically.
+
+
+
+## Why is it useful?
+
+* Using "-e" with the "grep" command is very useful for the user to search for multiple strings or "patterns" through the specified directory.
+* You caan implement multiple "-e" to continously add "patterns" that you intend to search for using "grep".
+* In the first example, we can see how it could be beneficial to search for both "Mountains" and "Rivers" simultaneously utilizing the "-e" command so that we can find a destination that contains either "Mountains", "Rivers" or both. That way we can ensure we vacation in a terrain that we enjoy!
+* In the second example, we utilize "-e" to specify that we are searching for instances of "Aztec" within the ".txt" file. 
+* We also apply "-n" which displays the line number that contains the specified "pattern" or in this case "Aztec".
+* This would be useful if we wanted to look further into a specific topic. In this instance we wanted to learn more about "Aztec" history in Vallarta, Mexico.
+
+________________________________________________________________________________________________________________________________________________________
+
+
+## Alternative Method 3: **"--color"**
+
+
+
+## **grep --color**
+* The "--color" command is used to highlight the specified "pattern". 
+* In our example we use "Aztec" to highlight the keyword "Aztec" in a specified ".txt" file.
+* This allows the user to easily identifiy the specified "pattern" from the text.
+
+# Here are 2 different examples of utilizing "grep --color":
+
+## Example 1: "grep --color -n -e "Aztec" Vallarta-History.txt"
+
+```
+
+pwd
+
+/c/Users/Chance/Desktop/CSE15L/LabReport3/skill-demo1-data-main/skill-demo1-data-main/written_2/travel_guides
+
+cd berlitz2
+
+pwd
+
+/c/Users/Chance/Desktop/CSE15L/LabReport3/skill-demo1-data-main/skill-demo1-data-main/written_2/travel_guides/berlitz2
+
+grep --color -n -e "Aztec" Vallarta-History.txt
+
+7:The region’s history has some marked differences from the history of Mexico as a country. Although artifacts show that both the <p> <span style="color: red">Aztec</span> </p> and Olmec pre-Hispanic cultures had a presence in the area, ancient civilizations created no notable settlements here. This fact, coupled with the geography of the region, spared it much of the bloodshed and turmoil of the Spanish conquest. With the imposing Sierra Madre Occidental mountain range running the length of the Pacific coastline, isolating it from the rest of mainland Mexico, the Pacific coast was able to develop at a slower, more tranquil pace.
+10:Puerto Vallarta was launched into the international spotlight when Hollywood director John Huston decided to film the Tennessee Williams’ play, Night of the Iguana, on nearby Mismaloya Beach. Its history, however, runs much deeper than that event. Recent archeological findings show six different cultures lived in the area, with settlements dating back to 300 b.c. The most important was part of the kingdom of Xalisco, centered in the modern state of Nayarit. A marked Aztec influence is also present, probably due to the centuries-long migration of Aztecs from the legendary city of Aztlán, on the Pacific coast, to Tenochtitlan, present-day Mexico City. Remains of these cultures can be seen in the Museo del Río Cuale.    
+27:In the early 1500s, Aztecs conquered the province of Coyuca, located between present-day Zihuatanejo and the Coyuca lagoon, and established a coastal capital, which they called Zihuatlan, “Place of Women,” named for the local matriarchal society. Residents today claim that the place was named for the beauty of the women, and means, “place of beautiful women.” 
+38:Even though Puerto Escondido is the more mature tourist destination of the two, Huatulco has the deepest historical roots. The Aztecs and Chichimecs (a Nahuatl-speaking warrior community) knew Huatulco as an important trading port long before the arrival of the Spanish conquistadors.     
+...
+
+```
+# As seen from my Visual Studio Code Terminal:
+
+![image](https://user-images.githubusercontent.com/122570751/218576865-ac464b59-10fb-4f1c-a627-de1a17b00540.png)
+
+## So what exactly does "grep --color -n -e "Aztec" Vallarta-History.txt" do & why is it useful?"
+
+## Lets break down the command:
+
+* What exactly does "grep --color -n -e "Aztec" Vallarta-History.txt" do? 
+* As we mentioned earlier, "grep" is a command used to search through files containing text for a specific "pattern", in this instance the pattern was "Aztec". 
+* We are also utilizing the "--color" command option which causes any instance of "Aztec" to be highlighted in the designated color so that it is easily identifiable.
+* Then, we implement the "-n", and "-e" command options to display the line number where the matching "pattern" is found. "-e" is then used to specify that we are searching for "Aztec" in this scenario.
+* Finally, we specify the directory. As you can see, we have selected "Vallarta-History.txt" as the file we planned to navigate.
+
+
+# Here is another example using "grep --color"
+
 ## Example 2: "grep -r -w -o "surfing" *.txt | sort | uniq -c | sort -nr"
 
 ```
@@ -231,7 +329,7 @@ grep -r -w -o "surfing" *txt | sort | uniq -c | sort -nr
 * As we mentioned earlier, "grep" is a command used to search through files containing text for a specific "pattern", in this instance the pattern was **"surfing"**. 
 * We are also utilizing the "-r" option which allows grep to search recursively through the directories and subdirectories of the current directory.
 * We then apply the "-w" command to search for the exact string "surfing" and not any strings that contain "surfing" such as "windsurfing".
-* We then utilize the "-o" command option that outputs the specified matching string found withing the file, in this case it is **"surfing"**.
+* We then utilize the "-o" command option that outputs the specified matching string found within the file, in this case it is **"surfing"**.
 * We then apply "*.txt | sort" command specifications. First "*.txt" declares that grep will only search through files containing ".txt" extenstions, Second "| sort" sorts the results obtained from the previous command.
 * Lastly, we apply the "| uniq -c | sort -nr" commands. The "| uniq -c" removes any duplicate lines and "-c" specifcally displays how many times "surfing" appears in each file. Finally, "| sort -nr" is applied. The command sorts the output in numerical descending order, with the file containing the most occurences "surfing" at the top.
 
@@ -244,90 +342,10 @@ grep -r -w -o "surfing" *txt | sort | uniq -c | sort -nr
 
 
     ..✨ <img src="https://user-images.githubusercontent.com/122570751/218375731-1d908d28-b74a-4d1a-bac6-eeb1b2b2a92e.png" width=10% height=10%> ✨..
-________________________________________________________________________________________________________________________________________________________
 
 
-**3. Step Three**
-- Connecting remotely to the ieng6 servers
-  * First download [git](https://gitforwindows.org/) using the standard installation settings. **(No need to change any settings during installation)**
-  * After git is finished downloading, follow the step by step instructions from this **[link](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal/50527994#50527994)**.
-  * (This will allow you to set Git Bash terminal as your default terminal)
-  * Great job!
- 
-________________________________________________________________________________________________________________________________________________________
 
 
-**4. Step Four**
-- Use git bash on Visual Studio Code and log in using the login creditentials we obtained in **Step One**.
-
-In order to use git bash on VScode you first have to open up VScode and open a new terminal and verify that Git Bash is set as the Default terminal. 
-
-![image](https://user-images.githubusercontent.com/122570751/212206604-c444d328-f691-4054-9a4f-131983279ecb.png)
-
-________________________________________________________________________________________________________________________________________________________
-
-
-Once you have the terminal ready, you're ready to login and begin testing some commands.
-
-## Login Steps for **ieng6**
-> - In the terminal in VScode type "ssh cs15lwi23___@ieng6.ucsd.edu" but make sure to replace the "___" with your unique 3 digit code that was acquired in **Step One**, then press enter.
-> - If this is your first time you will recieve a message asking you to authorize your connection to the server. It should look like this...
-> ```
-> ⤇ ssh cs15lwi23zz@ieng6.ucsd.edu
-> The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
-> RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
-> Are you sure you want to continue connecting (yes/no/[fingerprint])? 
-> ```
-> Type **Yes** and press **Enter**.
-> You will then be given a prompt to enter your password, type in your password from **Step One** and press **Enter**.
-> *Notice that you will not see your password being written out. This is a security feature.*
-> Once logged in correctly you should see some text being displayed in your terminal similar to the photo below.
->
-> ![image](https://user-images.githubusercontent.com/122570751/212208288-a6695f5e-5af2-4e35-b394-e120428238a9.png)
->
-
-**Nice Job! You are now connected REMOTELY to a computer located in the CSE building.**
-**Any commands that you enter in the terminal will be run on that computer.**
-
-________________________________________________________________________________________________________________________________________________________
-
-
-# **Want to try out some commands?**
-
-> I recommend running some simple commands to test out the terminal and ensure that everything is running effortlessly!
-> 
-> **Some commands to try**
-> ________________________
->
->  **Try using "pwd" command in the terminal.**
->    * pwd stands for "Print Working Directory". Which essentially prints the current directory that your are in.
->    Here is an example:
->    
->    ![image](https://user-images.githubusercontent.com/122570751/212210696-dc771b0e-09da-440d-af50-65ce2dd51545.png)
->    
->    After typing in "pwd" we are given the current working directory, which in the example is **"/home/linux/ieng6/cs15lwi23/cs15lwi23asg"**.
-
-
->  **Try using "cat /home/linux/ieng6/cs15lwi23/public/hello.txt" command in the terminal.**
->    * Cat stands for "concatenate". This command prints the contents of the path that is given.
->    In this example we are using the "/home/linux/ieng6/cs15lwi23/public/hello.txt" directory to access the contents of "hello.txt" file.
->    Here is an example:
->    
->    ![image](https://user-images.githubusercontent.com/122570751/212211661-3dd9d5dd-c977-406c-98f9-2cf50322fd65.png)
->    
->    As you can see, after typing in "cat <path>" the contents of the "<path>" are printed out and in this example we see the message.
->    "Hello! Welcome to CSE 15L"
-
- 
->  **Try using "cd .." command in the terminal.**
->    * cd stands for "current directory". And ".." retrieves the parent directory.
->    So together using "cd .." we are given the parent directory of the current directory.
->    Here is an example:
->
->    ![image](https://user-images.githubusercontent.com/122570751/212212767-0edbebe5-b822-4d65-849b-a963d7421a39.png)
->
->    As you can see the current directory was changed to the parent directory after using the command "cd .."
->
 
  
 > **Great Job! Check out these additional commands you can try.**
