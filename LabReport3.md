@@ -294,7 +294,7 @@ grep --color -n -e "Aztec" Vallarta-History.txt
 
 # Here is another example using "grep --color"
 
-## Example 2: "grep -r -w -o "surfing" *.txt | sort | uniq -c | sort -nr"
+## Example 2: "grep --color"
 
 ```
 
@@ -304,54 +304,16 @@ pwd
 
 cd berlitz2
 
-grep -r -w -o "surfing" *txt | sort | uniq -c | sort -nr
-
-      3 Vallarta-WhatToDo.txt:surfing
-      3 PuertoRico-WhereToGo.txt:surfing
-      3 California-WhatToDo.txt:surfing
-      2 Portugal-WhereToGo.txt:surfing
-      2 Bali-WhereToGo.txt:surfing
-      2 Bahamas-WhatToDo.txt:surfing
-      1 Vallarta-WhereToGo.txt:surfing
-      1 PuertoRico-WhatToDo.txt:surfing
-      1 CstaBlanca-WhereToGo.txt:surfing
-      1 CostaBlanca-WhatToDo.txt:surfing
-      1 CanaryIslands-WhatToDo.txt:surfing
+grep --color
           
       
 ```
 
-## What "grep -r -w -o "surfing" *.txt | sort | uniq -c | sort -nr" is doing & why is it useful?"
+## What "grep --color" is doing & why is it useful?"
 
 ## Lets break down the command:
 
-* What exactly does "grep -r -w -o **"surfing"** *.txt | sort | uniq -c | sort -nr" do? 
-* As we mentioned earlier, "grep" is a command used to search through files containing text for a specific "pattern", in this instance the pattern was **"surfing"**. 
-* We are also utilizing the "-r" option which allows grep to search recursively through the directories and subdirectories of the current directory.
-* We then apply the "-w" command to search for the exact string "surfing" and not any strings that contain "surfing" such as "windsurfing".
-* We then utilize the "-o" command option that outputs the specified matching string found within the file, in this case it is **"surfing"**.
-* We then apply "*.txt | sort" command specifications. First "*.txt" declares that grep will only search through files containing ".txt" extenstions, Second "| sort" sorts the results obtained from the previous command.
-* Lastly, we apply the "| uniq -c | sort -nr" commands. The "| uniq -c" removes any duplicate lines and "-c" specifcally displays how many times "surfing" appears in each file. Finally, "| sort -nr" is applied. The command sorts the output in numerical descending order, with the file containing the most occurences "surfing" at the top.
+* What exactly does "grep --color" do? 
 
 
 
-## Why is it useful?
-
-* If you're a fan of coconuts and want to vacation in a place most likely to have them, it would be very beneficial to use the "grep -r -c "Coconut"" command to search through all the "travel_guides" located in "written_2" and find the ones that contain "Coconut" most often in their text. This is the easiest way to ensure that your next vacation is likely to contain coconuts!
-* Or maybe you have a love for surfing and want to find out what destination is all about getting their surf on! If thats the case the using "grep -r -w -o **"surfing"** *txt | sort | uniq -c | sort -nr" will present you with the perfect list of destinations that will be perfect for those looking for a great surf destination.
-
-
-    ..✨ <img src="https://user-images.githubusercontent.com/122570751/218375731-1d908d28-b74a-4d1a-bac6-eeb1b2b2a92e.png" width=10% height=10%> ✨..
-
-
-
-
-
- 
-> **Great Job! Check out these additional commands you can try.**
->    - cd
->    - ls -lat
->    - cd ~
->    Any idea what they do?
-  
-## You finished! Great Job!
