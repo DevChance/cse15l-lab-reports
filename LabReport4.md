@@ -4,9 +4,9 @@ Written by: Chance Spurlin
 
 ------------------------------------
 
-# In this Lab Report, we will learn how to clone a repository, run, fix, and update, tests all by through using the terminal.
+#### **In this Lab Report, we will learn how to log into a remote server, clone a repository, run, fix, and update tests, all through the terminal.**
 
-## We will be completing these 6 steps
+## To do this we will be completing these **6 steps**
 
 **1. Log into ieng6**
 
@@ -26,11 +26,11 @@ Written by: Chance Spurlin
 
 
 
-# Let's first begin by starting at the terminal:
+## Let's first begin by starting at the terminal:
 
 ![image](https://user-images.githubusercontent.com/122570751/223589550-918f6b24-0351-4dee-b693-dfa0c59759af.png)
 
-# Now Lets Complete Each of The Six Steps:
+## Now Lets Complete Each of The Six Steps:
 
 ## Step One: Log into ieng6
 
