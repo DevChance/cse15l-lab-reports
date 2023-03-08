@@ -30,7 +30,7 @@ Written by: Chance Spurlin
 
 ![image](https://user-images.githubusercontent.com/122570751/223589550-918f6b24-0351-4dee-b693-dfa0c59759af.png)
 
-## Now Lets Complete Each of The Six Steps:
+# Now Lets Complete Each of The Six Steps:
 
 ## Step One: Log into ieng6
 
