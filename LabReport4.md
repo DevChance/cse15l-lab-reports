@@ -6,320 +6,117 @@ Written by: Chance Spurlin
 
 # In this Lab Report, we will learn how to clone a repository, run, fix, and update, tests all by through using the terminal.
 
-**We will be completing these 6 steps**
-#1. Log into ieng6
-#2. Clone your fork of the repository from your Github account
-#3. Run the tests, demonstrating that they fail
-#4. Edit the code file to fix the failing test
-#5. Run the tests, demonstrating that they now succeed
-#6. Commit and push the resulting change to your Github account (you can pick any commit message!)
+## We will be completing these 6 steps
+
+**1. Log into ieng6**
+
+**2. Clone your fork of the repository from your Github account**
+
+**3. Run the tests, demonstrating that they fail**
+
+**4. Edit the code file to fix the failing test**
+
+**5. Run the tests, demonstrating that they now succeed**
+
+**6. Commit and push the resulting change to your Github account (you can pick any commit message!)**
+
+
+
+
 
 
 
 # Let's first begin by starting at the terminal:
+
 ![image](https://user-images.githubusercontent.com/122570751/223589550-918f6b24-0351-4dee-b693-dfa0c59759af.png)
 
 # Now Lets Complete Each of The Six Steps:
 
-# Step One: Log into ieng6
+## Step One: Log into ieng6
 
-1. First, we must log into the ieng6 server. To do this, we type ssh cs15lwi23___@ieng6.ucsd.edu.
-2. You will then be prompted to enter your password, after you enter your password hit [ENTER]
+**1. First, we must log into the ieng6 server. To do this, we type ssh cs15lwi23___@ieng6.ucsd.edu.**
+
+**2. You will then be prompted to enter your password, after you enter your password press [ENTER].**
+
+**3. Now you're logged in to ieng6!**
 
 ![image](https://user-images.githubusercontent.com/122570751/223589816-992b4e95-ec31-4807-a3e0-8ec88e94c37e.png)
 
 
-## Alternative Method 1: **"-c"**
+
+## Step Two: Clone your fork of the repository from your Github account
+
+**1. First, you type git clone ______.**
+
+**2. The blank space is where you insert your <ins>ssh clone url<ins>.**
+
+**3. Then press [ENTER] and your github repository from your account should be cloned!**
 
 
-
-## **grep -c**
-* The "-c" command counts the number of matches of the specified "pattern" that are contained in the designated files.
-* For example from the "written_2", if we wanted to know the number of times "Coconut" is mentioned in each file.
-* After succesfully navgiating to the currect directory, you could type "grep -r -c "Coconut"" to search rercusively through the directories and subdirectories of the current directory and print out the number of times the string "Coconut" is found in each directory and sub-directory. 
-
-# Here are 2 different examples of utilizing "grep -c":
-
-## Example 1: "grep -r -c "Coconut"
-
-```
-
-pwd
-
-/c/Users/Chance/Desktop/CSE15L/LabReport3/skill-demo1-data-main/skill-demo1-data-main
-
-grep -r -c "Coconut"
-
-written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt:1
-written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt:1
-written_2/travel_guides/berlitz2/Vallarta-History.txt:0
-written_2/travel_guides/berlitz2/PuertoRico-WhereToGo.txt:1
-written_2/travel_guides/berlitz2/Bahamas-Intro.txt:0
-written_2/travel_guides/berlitz2/Bahamas-WhatToDo.txt:0
-written_2/travel_guides/berlitz2/Bahamas-WhereToGo.txt:1
-written_2/travel_guides/berlitz1/WhereToIndia.txt:1
-written_2/travel_guides/berlitz2/Cancun-WhereToGo.txt:1
-written_2/travel_guides/berlitz2/China-History.txt:0
-written_2/travel_guides/berlitz2/Costa-WhatToDo.txt:0
-written_2/travel_guides/berlitz2/CostaBlanca-History.txt:0
-written_2/travel_guides/berlitz2/Nepal-WhatToDo.txt:0
-written_2/travel_guides/berlitz2/NewOrleans-History.txt:0
-written_2/travel_guides/berlitz2/Paris-WhatToDo.txt:0
-written_2/travel_guides/berlitz2/Paris-WhereToGo.txt:0
-written_2/travel_guides/berlitz2/Poland-History.txt:0
-written_2/travel_guides/berlitz2/Poland-WhatToDo.txt:0
-written_2/travel_guides/berlitz2/Portugal-History.txt:0
-...
-
-```
-
-## What "grep -r -c "Coconut" is doing & why is it useful?"
-
-## Lets break down the command:
-
-* What exactly does "grep -r -c "Coconut"" do? 
-* As we mentioned earlier, "grep" is a command used to search through files containing text for a specific "pattern", in this instance the pattern was "Coconut". 
-* We are also utilizing the "-r" option which allows grep to search recursively through the directories and subdirectories of the current directory.
-* Finally, we use the "-c" command option that counts the number times the specified pattern is found in the files contained in the directories and displays the number of occurences.
+![image](https://user-images.githubusercontent.com/122570751/223590879-1bc03dce-ecbf-4de4-b812-a725e11f118a.png)
 
 
-# Here is another example using "grep -c"
+## Step Three: Run the tests, demonstrating that they fail
 
-## Example 2: "grep -r -w -o "surfing" *.txt | sort | uniq -c | sort -nr"
-
-```
-
-pwd
-
-/c/Users/Chance/Desktop/CSE15L/LabReport3/skill-demo1-data-main/skill-demo1-data-main/written_2/travel_guides
-
-cd berlitz2
-
-grep -r -w -o "surfing" *txt | sort | uniq -c | sort -nr
-
-      3 Vallarta-WhatToDo.txt:surfing
-      3 PuertoRico-WhereToGo.txt:surfing
-      3 California-WhatToDo.txt:surfing
-      2 Portugal-WhereToGo.txt:surfing
-      2 Bali-WhereToGo.txt:surfing
-      2 Bahamas-WhatToDo.txt:surfing
-      1 Vallarta-WhereToGo.txt:surfing
-      1 PuertoRico-WhatToDo.txt:surfing
-      1 CstaBlanca-WhereToGo.txt:surfing
-      1 CostaBlanca-WhatToDo.txt:surfing
-      1 CanaryIslands-WhatToDo.txt:surfing
-          
+1. After cloning your repository you now need to cd into lab7/.
       
-```
-
-## What "grep -r -w -o "surfing" *.txt | sort | uniq -c | sort -nr" is doing & why is it useful?"
-
-## Lets break down the command:
-
-* What exactly does "grep -r -w -o **"surfing"** *.txt | sort | uniq -c | sort -nr" do? 
-* As we mentioned earlier, "grep" is a command used to search through files containing text for a specific "pattern", in this instance the pattern was **"surfing"**. 
-* We are also utilizing the "-r" option which allows grep to search recursively through the directories and subdirectories of the current directory.
-* We then apply the "-w" command to search for the exact string "surfing" and not any strings that contain "surfing" such as "windsurfing".
-* We then utilize the "-o" command option that outputs the specified matching string found within the file, in this case it is **"surfing"**.
-* We then apply "*.txt | sort" command specifications. First "*.txt" declares that grep will only search through files containing ".txt" extenstions, Second "| sort" sorts the results obtained from the previous command.
-* Lastly, we apply the "| uniq -c | sort -nr" commands. The "| uniq -c" removes any duplicate lines and "-c" specifcally displays how many times "surfing" appears in each file. Finally, "| sort -nr" is applied. The command sorts the output in numerical descending order, with the file containing the most occurences "surfing" at the top.
-
-
-
-## Why is it useful?
-
-* If you're a fan of coconuts and want to vacation in a place most likely to have them, it would be very beneficial to use the "grep -r -c "Coconut"" command to search through all the "travel_guides" located in "written_2" and find the ones that contain "Coconut" most often in their text. This is the easiest way to ensure that your next vacation is likely to contain coconuts!
-* Or maybe you have a love for surfing and want to find out what destination is all about getting their surf on! If thats the case the using "grep -r -w -o **"surfing"** *txt | sort | uniq -c | sort -nr" will present you with the perfect list of destinations that will be perfect for those looking for a great surf destination.
-
-
-    ..✨ <img src="https://user-images.githubusercontent.com/122570751/218375731-1d908d28-b74a-4d1a-bac6-eeb1b2b2a92e.png" width=10% height=10%> ✨..
-
-
-
-
-
-
-
-
-
-________________________________________________________________________________________________________________________________________________________
-
-## Alternative Method 2: **"-e"**
-
-
-
-## **grep -e**
-* The "-e" command allows you to use grep to search for multple "patterns" at the same time.
-* After succesfully navgiating to the correct directory, you could type "grep -l -r -e "Pattern1" -e "Pattern2" to search rercusively through the directories and subdirectories of the current directory and print out files that contain either "Pattern1", "Pattern2" or both.
-
-# Here are 2 different examples of utilizing "grep -e":
-
-## Example 1: "grep -l -r -e "Mountains" -e "Rivers""
-
-```
-pwd
-
-/c/Users/Chance/Desktop/CSE15L/LabReport3/skill-demo1-data-main/skill-demo1-data-main
-
-grep -l -r -e "Mountains" -e "Rivers"
-
-written_2/non-fiction/OUP/Berk/ch1.txt
-written_2/non-fiction/OUP/Castro/chA.txt
-written_2/travel_guides/berlitz1/HandRJamaica.txt
-written_2/travel_guides/berlitz1/IntroDublin.txt
-written_2/travel_guides/berlitz1/WhatToIsrael.txt
-written_2/travel_guides/berlitz1/WhatToJamaica.txt
-written_2/travel_guides/berlitz1/WhatToLosAngeles.txt
-written_2/travel_guides/berlitz1/WhereToDublin.txt
-written_2/travel_guides/berlitz1/WhereToItaly.txt
-written_2/travel_guides/berlitz1/WhereToJapan.txt
-written_2/travel_guides/berlitz1/WhereToLakeDistrict.txt
-written_2/travel_guides/berlitz1/WhereToLosAngeles.txt
-written_2/travel_guides/berlitz1/WhereToMalaysia.txt
-written_2/travel_guides/berlitz2/Bali-WhereToGo.txt
-written_2/travel_guides/berlitz2/Beijing-WhereToGo.txt
-written_2/travel_guides/berlitz2/Budapest-History.txt
-written_2/travel_guides/berlitz2/Budapest-WhereoGo.txt
-written_2/travel_guides/berlitz2/California-History.txt
-written_2/travel_guides/berlitz2/California-WhereToGo.txt
-written_2/travel_guides/berlitz2/Canada-WhereToGo.txt
-written_2/travel_guides/berlitz2/CanaryIslands-WhereToGo.txt
-written_2/travel_guides/berlitz2/China-WhereToGo.txt
-written_2/travel_guides/berlitz2/Costa-History.txt
-written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
-written_2/travel_guides/berlitz2/Crete-WhereToGo.txt
-written_2/travel_guides/berlitz2/Portugal-WhereToGo.txt
-written_2/travel_guides/berlitz2/Vallarta-History.txt
-written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt
-written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
-
-```
-## What "grep -l -r -e "Mountains" -e "Rivers"" is doing & why is it useful?"
-
-## Lets break down the command:
-
-* What exactly does "grep -l -r -e "Mountains" -e "Rivers"" do? 
-* As we mentioned earlier, "grep" is a command used to search through files containing text for a specific "pattern", in this instance the patterns are "Mountains" and "Rivers". 
-* We are also utilizing the "-l","-r" command options which allows grep to search recursively through the directories and subdirectories of the current directory and lists the names of the files that contain the specified "patterns".
-* Finally, we utilize the **"-e"** command option that allows us to search for multiple "patterns" at the same time. In this instance we are searching for either "Mountains" or "Rivers" or files that contains both.
-
-# Here is another example using "grep -e"
-
-## Example 2: "grep -n -e "Aztec" Vallarta-History.txt"
-
-```
-
-pwd
-
-/c/Users/Chance/Desktop/CSE15L/LabReport3/skill-demo1-data-main/skill-demo1-data-main/written_2/travel_guides
-
-cd berlitz2
-
-pwd
-
-/c/Users/Chance/Desktop/CSE15L/LabReport3/skill-demo1-data-main/skill-demo1-data-main/written_2/travel_guides/berlitz2
-
-grep -n -e "Aztec" Vallarta-History.txt 
-
-7:The region’s history has some marked differences from the history of Mexico as a country. Although artifacts show that both the Aztec and Olmec pre-Hispanic cultures had a presence in the area, ancient civilizations created no notable settlements here. This fact, coupled with the geography of the region, spared it much of the bloodshed and turmoil of the Spanish conquest. With the imposing Sierra Madre Occidental mountain range running the length of the Pacific coastline, isolating it from the rest of mainland Mexico, the Pacific coast was able to develop at a slower, more tranquil pace.
-10:Puerto Vallarta was launched into the international spotlight when Hollywood director John Huston decided to film the Tennessee Williams’ play, Night of the Iguana, on nearby Mismaloya Beach. Its history, however, runs much deeper than that event. Recent archeological findings show six different cultures lived in the area, with settlements dating back to 300 b.c. The most important was part of the kingdom of Xalisco, centered in the modern state of Nayarit. A marked Aztec influence is also present, probably due to the centuries-long migration of Aztecs from the legendary city of Aztlán, on the Pacific coast, to Tenochtitlan, present-day Mexico City. Remains of these cultures can be seen in the Museo del Río Cuale.    
-27:In the early 1500s, Aztecs conquered the province of Coyuca, located between present-day Zihuatanejo and the Coyuca lagoon, and established a coastal capital, which they called Zihuatlan, “Place of Women,” named for the local matriarchal society. Residents today claim that the place was named for the beauty of the women, and means, “place of beautiful women.” 
-...
+2. First, type: cd lab7/ (You can type l followed by <tab> to autogenerate the rest of the file).
       
-```
-
-## What "grep -n -e "Aztec" Vallarta-History.txt" is doing & why is it useful?"
-
-## Lets break down the command:
-
-* What exactly does "grep -n -e "Aztec" Vallarta-History.txt" do? 
-* As we mentioned earlier, "grep" is a command used to search through files containing text for a specific "pattern", in this instance the pattern was **"Aztec"**. 
-* We are also utilizing the "-n" option which causes grep to display the specific line number that the "Aztec" was found in.
-* Lastly, we apply the "-e" command to search for all the occurrences of the string "Aztec" "in Vallarta-History.txt".
-* We then specify the directory destiniation, which in this case is "Vallarta-History.txt" because we are looking into this destination specifically.
-
-
-
-## Why is it useful?
-
-* Using "-e" with the "grep" command is very useful for the user to search for multiple strings or "patterns" through the specified directory.
-* You caan implement multiple "-e" to continously add "patterns" that you intend to search for using "grep".
-* In the first example, we can see how it could be beneficial to search for both "Mountains" and "Rivers" simultaneously utilizing the "-e" command so that we can find a destination that contains either "Mountains", "Rivers" or both. That way we can ensure we vacation in a terrain that we enjoy!
-* In the second example, we utilize "-e" to specify that we are searching for instances of "Aztec" within the ".txt" file. 
-* We also apply "-n" which displays the line number that contains the specified "pattern" or in this case "Aztec".
-* This would be useful if we wanted to look further into a specific topic. In this instance we wanted to learn more about "Aztec" history in Vallarta, Mexico.
-
-________________________________________________________________________________________________________________________________________________________
-
-
-## Alternative Method 3: **"--color"**
-
-
-
-## **grep --color**
-* The "--color" command is used to highlight the specified "pattern". 
-* In our example we use "Aztec" to highlight the keyword "Aztec" in a specified ".txt" file.
-* This allows the user to easily identifiy the specified "pattern" from the text.
-
-# Here are 2 different examples of utilizing "grep --color":
-
-## Example 1: "grep --color -n -e "Aztec" Vallarta-History.txt"
-
-```
-
-pwd
-
-/c/Users/Chance/Desktop/CSE15L/LabReport3/skill-demo1-data-main/skill-demo1-data-main/written_2/travel_guides
-
-cd berlitz2
-
-pwd
-
-/c/Users/Chance/Desktop/CSE15L/LabReport3/skill-demo1-data-main/skill-demo1-data-main/written_2/travel_guides/berlitz2
-
-grep --color -n -e "Aztec" Vallarta-History.txt
-
-7:The region’s history has some marked differences from the history of Mexico as a country. Although artifacts show that both the <p> <span style="color: red">Aztec</span> </p> and Olmec pre-Hispanic cultures had a presence in the area, ancient civilizations created no notable settlements here. This fact, coupled with the geography of the region, spared it much of the bloodshed and turmoil of the Spanish conquest. With the imposing Sierra Madre Occidental mountain range running the length of the Pacific coastline, isolating it from the rest of mainland Mexico, the Pacific coast was able to develop at a slower, more tranquil pace.
-10:Puerto Vallarta was launched into the international spotlight when Hollywood director John Huston decided to film the Tennessee Williams’ play, Night of the Iguana, on nearby Mismaloya Beach. Its history, however, runs much deeper than that event. Recent archeological findings show six different cultures lived in the area, with settlements dating back to 300 b.c. The most important was part of the kingdom of Xalisco, centered in the modern state of Nayarit. A marked Aztec influence is also present, probably due to the centuries-long migration of Aztecs from the legendary city of Aztlán, on the Pacific coast, to Tenochtitlan, present-day Mexico City. Remains of these cultures can be seen in the Museo del Río Cuale.    
-27:In the early 1500s, Aztecs conquered the province of Coyuca, located between present-day Zihuatanejo and the Coyuca lagoon, and established a coastal capital, which they called Zihuatlan, “Place of Women,” named for the local matriarchal society. Residents today claim that the place was named for the beauty of the women, and means, “place of beautiful women.” 
-38:Even though Puerto Escondido is the more mature tourist destination of the two, Huatulco has the deepest historical roots. The Aztecs and Chichimecs (a Nahuatl-speaking warrior community) knew Huatulco as an important trading port long before the arrival of the Spanish conquistadors.     
-...
-
-```
-# As seen from my Visual Studio Code Terminal:
-
-![image](https://user-images.githubusercontent.com/122570751/218576865-ac464b59-10fb-4f1c-a627-de1a17b00540.png)
-
-## So what exactly does "grep --color -n -e "Aztec" Vallarta-History.txt" do & why is it useful?"
-
-## Lets break down the command:
-
-* What exactly does "grep --color -n -e "Aztec" Vallarta-History.txt" do? 
-* As we mentioned earlier, "grep" is a command used to search through files containing text for a specific "pattern", in this instance the pattern was "Aztec". 
-* We are also utilizing the "--color" command option which causes any instance of "Aztec" to be highlighted in the designated color so that it is easily identifiable.
-* Then, we implement the "-n", and "-e" command options to display the line number where the matching "pattern" is found. "-e" is then used to specify that we are searching for "Aztec" in this scenario.
-* Finally, we specify the directory. As you can see, we have selected "Vallarta-History.txt" as the file we planned to navigate.
-
-
-# Here is another example using "grep --color"
-
-## Example 2: "grep --color"
-
-```
-
-pwd
-
-/c/Users/Chance/Desktop/CSE15L/LabReport3/skill-demo1-data-main/skill-demo1-data-main/written_2/travel_guides
-
-cd berlitz2
-
-grep --color
-          
+3. Now that we are in the correct directory we can begin to compile and run the java tests.
       
-```
+4. To compile we type and press [ENTER]: javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+      
+5. This compiles all .java files in the current directory.
+      
+6. Then to run the tests we type and press [ENTER]: java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests.
+    
+7. This will run the **ListExampleTests** and output the results.
+      
+![image](https://user-images.githubusercontent.com/122570751/223592206-ffa59c7c-e8d2-4d58-953d-6968f236cfc6.png)
 
-## What "grep --color" is doing & why is it useful?"
+## Step Four: Edit the code file to fix the failing test
+ 
+1. After running the test, we notice that there is 1 failure, this is what we are going to fix!
+2. To access the test file we will type: nano ListExamples.java
+3. Now that we have nano'd into the file, we will navigate to fix the bug causing the failed test.
+4. Press <CNTRL> W
+5. This will search through the file, then type and press [ENTER]: while(index2
+6. This will bring you to the first occurence of "while(index2" then press down on the arrow key twice (<dowm> <down>)
+7. This will bring you to the line containing "index1 += 1" navigate to the 1 by pressing on the right arrow key 8 times (<right> <right> <right> <right> <right> <right> <right> <right> <right>)
+8. This will bring you to the number 1. Delete the number 1 in "index1" and replace it with the number 2 so it is now "index2"
+9. The new line should be "index2 += 1".
+10. Then press <CNTRL> X. This will prompt the terminal to ask you if you would "Yes" like to save "No" dont save.
+11. Press Y for "Yes" and then it will prompt you for the file name, it should remain the same so just press [ENTER]
 
-## Lets break down the command:
+![image](https://user-images.githubusercontent.com/122570751/223594813-44ae60ef-703a-47ae-829e-99a22d5264f2.png)
+      
+![image](https://user-images.githubusercontent.com/122570751/223594973-85ee9c6e-d567-475a-8111-534d130a4225.png)   
+      
+![image](https://user-images.githubusercontent.com/122570751/223595100-19f7937d-e0c5-498b-ab73-7469d1f02ba9.png)
 
-* What exactly does "grep --color" do? 
+      
+## Step Five: Run the tests, demonstrating that they now succeed
+
+1. After fixing the file we now want to rerun the tests to ensure they pass succesfully after we addressed the bug.
+2. After exiting nano text editor we will be at the cwd, we then want to compile all the .java files again.
+3. To compile we type and press [ENTER]: javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+4. Then to run the test we type and press [ENTER]: java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests
+5. After running the tests we notice that the results and printed and we got "OK (2 tests)" which shows we succesfully fixed the bug!
+
+![image](https://user-images.githubusercontent.com/122570751/223595880-f74903b8-cc4c-4e9b-acd3-2f737e9bcd60.png)
+
+## Step Six: Commit and push the resulting change to your Github account (you can pick any commit message!)
+
+1. After running the tests and ensuring everything passed, we want to add, commit, and push the changes to our repository.
+2. To do this, first we type : git add ListExamples.java
+3. This stages the changes for that file, we then type: git commit -m "Updated ListExamples.java"
+4. After commiting the changes we want to push the command to our repository so we type: git push origin main
+5. This push all of our changes to "ListExamples.java" to reflect on the repository on my Github account.
+
+![image](https://user-images.githubusercontent.com/122570751/223596628-c7c25ddb-3cb6-458e-96b3-13b24f1d547d.png)
+
+# Now lets navigate to the github repository online to see if the changes were made!
+
+![image](https://user-images.githubusercontent.com/122570751/223596786-dd546a06-6685-4b98-98be-c1c35be92952.png)
+
+# As we can see, "index1 += 1" on line 43 was succesfully changed to "index2 += 1" this change fixes all tests!
