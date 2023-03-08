@@ -122,6 +122,7 @@ Written by: Chance Spurlin
 ![image](https://user-images.githubusercontent.com/122570751/223596628-c7c25ddb-3cb6-458e-96b3-13b24f1d547d.png)
 
 ### Now lets navigate to the github repository online to see if the changes were made!
+![image](https://user-images.githubusercontent.com/122570751/223622737-8e60e266-3ad2-4f2a-9ca7-edadc885b266.png)
 
-![image](https://user-images.githubusercontent.com/122570751/223596786-dd546a06-6685-4b98-98be-c1c35be92952.png)
-### As we can see, **"index1 += 1"** on line 43 was succesfully changed to **"index2 += 1"** this change fixes all tests!
+#### As we can see, **"index1 += 1"** on line 43 was succesfully changed to **"index2 += 1"** this change allows all tests to PASS succesfully!
+### Great Job!
