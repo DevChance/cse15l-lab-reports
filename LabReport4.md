@@ -120,11 +120,10 @@ Written by: Chance Spurlin
 ![image](https://user-images.githubusercontent.com/122570751/223622737-8e60e266-3ad2-4f2a-9ca7-edadc885b266.png)
 
 #### As we can see, `"index1 += 1"` on line 43 was succesfully changed to `"index2 += 1"` this change allows all tests to PASS succesfully!
-### Great Job!
-      
+### Great Job!!!
       
 <style>
 body {
-  background-color: #9e9e9e;
+  background-color: #F2F2F2;
 }
 </style>
