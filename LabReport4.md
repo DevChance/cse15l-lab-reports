@@ -2,6 +2,8 @@
 
 Written by: Chance Spurlin
 
+Test Final `Test Final`
+
 ------------------------------------
 
 #### **In this Lab Report, we will learn how to log into a remote server, clone a repository, run, fix, and update tests, all through the terminal.**
