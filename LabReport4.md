@@ -2,8 +2,6 @@
 
 Written by: Chance Spurlin
 
-Test Final `Test Final`
-
 ------------------------------------
 
 #### **In this Lab Report, we will learn how to log into a remote server, clone a repository, run, fix, and update tests, all through the terminal.**
@@ -123,3 +121,10 @@ Test Final `Test Final`
 
 #### As we can see, `"index1 += 1"` on line 43 was succesfully changed to `"index2 += 1"` this change allows all tests to PASS succesfully!
 ### Great Job!
+      
+      
+<style>
+body {
+  background-color: #F2F2F2;
+}
+</style>
