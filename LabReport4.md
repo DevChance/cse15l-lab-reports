@@ -125,6 +125,6 @@ Written by: Chance Spurlin
       
 <style>
 body {
-  background-color: #F2F2F2;
+  background-color: #9e9e9e;
 }
 </style>
