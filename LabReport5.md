@@ -104,4 +104,4 @@ echo "Great job! You finished!"
 
 ![image](https://user-images.githubusercontent.com/122570751/224885781-0c405e91-8acc-4fa1-be67-805d2a27311a.png)
 
-## Great job! Utilizing a bash script I significantly reduced the time it takes to run tests, edit a file, rerun tests, save and push the file correctly.
+## Utilizing this bash script I significantly reduced the time it takes to complete the tasks from the previous lab report competition.
