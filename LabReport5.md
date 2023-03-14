@@ -6,11 +6,11 @@ Written by: Chance Spurlin
 
 #### **In this lab report we will utilize a bash script to complete the tasks from Lab Report 4; This will greatly reduce the time and effort needed to complete the tasks!**
 
- * As you may recall from Lab Report 4, we were tasked to complete a total of **6 steps**
+ * As you may recall from Lab Report 4, we were tasked to complete a total of **six steps**
  * Utilizing a bash script we are going to streamline the process and significantly reduce the number of steps required by the user
- * This will greatly reduce the time  needed to complete the task and minimize the risk of user-errors
+ * This will greatly reduce the time needed to complete the task and minimize the risk of user-errors
 
-## For reference, here are the **6 steps** from Lab Report 4 that we will complete in our bash script:
+## For reference, here are the **six steps** from Lab Report 4 that we will complete in our bash script:
 
 **1. Log into ieng6**
 
@@ -36,7 +36,7 @@ Written by: Chance Spurlin
 
 ## After typing nano, a bash script file was created in the current directory named **Lab5Bash.sh**, it will now prompt the user to code the script:
 
-### To greatly reduce the number of tasks and  time this is the bash file I created that completes the **6 steps**:
+### To greatly reduce the number of tasks and  time this is the bash file I created that completes the **six steps**:
 
 ```
 #!/bin/bash
@@ -69,7 +69,7 @@ git push origin main
 echo "Great job! You finished!"
 ```
 
-## We then enter than into our nano text editor:
+## We then enter that into our nano text editor:
 
 ![image](https://user-images.githubusercontent.com/122570751/224883709-93c423f1-2bdf-4b65-ac59-2872315eee18.png)
 
@@ -92,7 +92,7 @@ echo "Great job! You finished!"
 - I am then prompted to enter the ssh clone url that I want to clone so I enter: `git@github.com:DevChance/lab7.git`
 
 #### The bash script then clones the repository and runs the tests
-#### This will then produce another prompt for the user to acknowledge the changes to be made, it then says press [ENTER] to continue:
+#### This will then produce another prompt for the user to acknowledge the changes to the file, it then says press [ENTER] to continue:
 
 ![image](https://user-images.githubusercontent.com/122570751/224885409-d3c6995e-d538-4807-8707-2c3568271e41.png)
 
@@ -100,7 +100,7 @@ echo "Great job! You finished!"
 
 ![image](https://user-images.githubusercontent.com/122570751/224885516-215f08ac-d538-486e-afb2-1029a4a98f35.png)
 
-### Then bash script reruns the tests and adds and pushs the fix for you! Then enter the commit message and press [ENTER]
+### Then bash script reruns the tests and adds and pushes the fix for you! Then enter the commit message and press [ENTER]
 
 ![image](https://user-images.githubusercontent.com/122570751/224885781-0c405e91-8acc-4fa1-be67-805d2a27311a.png)
 
